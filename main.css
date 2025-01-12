@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+#root {
+font-family: 'Roboto', sans-serif;
+color: #100c08;
+padding-top: 30px;
+}
+
+.widgetCont {
+    margin: 5px 0;
+    background-color: lightcyan;
+}
+
+.widgetBtnCont {
+    padding: 20px;
+}
+
+.widgetBtn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: darkblue;
+    background-color: lightskyblue;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darkblue;
+        color: lightskyblue;
+    }
+}
+
+.widgetBtn:hover {
+    background-color: darkblue;
+        color: lightskyblue;
+}
+
+.widgetBodyCont1 {
+    display: block;
+    
+    overflow: hidden;
+    /* margin-block-start: 0.5lh; */
+    color: transparent;
+    line-height: 0;
+    padding: 0 20px;
+    transition: line-height 1s;
+}
+
+.widgetBodyContVisible1 {
+    /* display: block; */
+    /* padding: 20px; */
+    line-height: 1.2;
+    color: black;
+    transition: line-height 1s;
+}
+
+.widgetBodyCont {
+    padding: 0 20px;
+    line-height: 0;
+    color: transparent;
+}
+
+.widgetBodyContOn {
+    padding: 20px 20px;
+    line-height: 1.2;
+    color: black;
+    animation-name: show;
+    animation-duration: 1s;
+}
+
+.widgetBodyContOff {
+    padding: 0 20px;
+    line-height: 0;
+    color: transparent;
+    animation-name: hide;
+    animation-duration: 1s;
+}
+
+@keyframes show {
+    0% {
+        line-height: 0;
+        padding: 0 20px;
+        color: transparent;
+    }
+
+    100% {
+        line-height: 1.2;
+        padding: 20px 20px;
+        color: black;
+    }
+}
+
+@keyframes hide {
+    0% {
+        line-height: 1.2;
+        padding: 20px 20px;
+        color: black;
+    }
+
+    100% {
+        line-height: 0;
+        padding: 0 20px;
+        color: transparent;
+    }
+}
+
